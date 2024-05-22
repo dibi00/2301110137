@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .visual {
+            background-image: url(img/back.jpg);
+            position: relative;
+        }
+        .visual .inner {
+            width: 1100px;
+            height: 646px;
+            position: relative;
+        }
+        .visual .title {
+            position: absolute;
+            top: 100px;
+            left: 1000px;
+            transform: rotate(10deg);
+        }
+        .visual .bigchara1 {
+            position: absolute;
+            bottom: 0;
+            right: -47px;
+        }
+        .visual .bigchara2 {
+            position: absolute;
+            width: 50%;
+            top: 200px;
+            left: 900px;
+            transform: rotate(15deg);
+        }
+        .visual .minichara1 {
+            width: 50px;
+            position: absolute;
+            top: -500px;
+            right: 150px;
+            transform: rotate(-15deg);
+        }
+        .visual .minichara2 {
+            width: 80px;
+            position: absolute;
+            top: -300px;
+            left: 1400px;
+        }
+        .visual .minichara3 {
+            width: 50px;
+            position: absolute;
+            top: -200px;
+            left: 1700px;
+        }
+        .visual .minichara4 {
+            width: 80px;
+            position: absolute;
+            top: -160px;
+            left: 50px;
+            transform: rotate(15deg);
+        }
+        .visual .minichara5 {
+            width: 50px;
+            position: absolute;
+            top: -200px;
+            right: 250px;
+        }
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div class="inner">
+            <div class="title fade-in">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="big character fade-in">
+                <img src="img/n_twinstars.png" alt="" class="bigchara image">
+                <img src="img/n_tw9.png" alt="" class="bigchara2 image">
+            </div>
+            <div class="mini character fade-in">
+                <img src="img/fairy1.png" alt="" class="minichara1 image">
+                <img src="img/fairy2.png" alt="" class="minichara2 image">
+                <img src="img/fairy3.png" alt="" class="minichara3 image">
+                <img src="img/fairy4.png" alt="" class="minichara4 image">
+                <img src="img/fairy5.png" alt="" class="minichara5 image">
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.visual .fade-in');
+        gsap.from(fadeEls, {
+            duration: 2,
+            scale: .8,
+            ease: 'elastic',
+            opacity: 0,
+            stagger: 0.5
+        })
+    </script>
+</body>
+</html>
